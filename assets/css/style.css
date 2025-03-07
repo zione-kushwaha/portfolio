@@ -863,8 +863,16 @@ main {
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item {
+  display: none;
+  background: hsl(0, 0%, 20%);
+  padding: 15px;
+  border-radius: 10px;
+}
 
+.project-item.active {
+  display: block; /* Show active project items */
+}
 
 .project-item.active {
   display: block;
@@ -950,6 +958,8 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
+
 
 
 
