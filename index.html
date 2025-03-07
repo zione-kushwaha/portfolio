@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeevan - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/image/jeevan.jpg" alt="Jeevan Kushwaha" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Jeevan Kumar Kushwaha">Jeevan Kushwaha</h1>
+
+          <p class="title">App developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:zionekushwaha@gmail.com" class="contact-link">zionekushwaha@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+977 9807151008" class="contact-link">+977 9807151008</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2003-10-29">0ct 29, 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Birgunj, Nepal</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item"></li>
+            <a href="https://github.com/zione-kushwaha" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/jeevan.kushwaha.9883" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/zi-one" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/kushwaha_jivan01?igsh=OTQxaGRweTZ0Mzh0" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+         
+          Skilled Flutter developer with a strong academic record, scholarships, and a published app on the GooglePlay Store. Completed internship, gaining hands-on experience in building responsive Flutter apps. Proficient
+in Dart, Firebase, and state management.
+            I enjoy
+            turning complex problems into simple, beautiful and intuitive designs.
+          </p>
+
+          <p>
+            While my primary focus is on app development, I also have knowledge of web development and enjoy creating websites for fun. I love exploring new technologies and bringing ideas to life through code.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">App design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level learning.
+                </p>
+              </div>
+
+            </li>
+
+            
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine learning</h4>
+
+                <p class="service-item-text">
+                    Exploring AI/ML and developing intelligent systems.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Research</h4>
+
+                <p class="service-item-text">
+                  Currently working on Research work on AI/ML under the guidance of Er. Pukar karki sir.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+     
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="overlay" data-overlay></div>
+
+        <button class="modal-close-btn" data-modal-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+          <h3 class="h3">Clients</h3>
+            <div class="clients-container"></div>
+            <div class="client-item">
+              <a href="https://www.facebook.com/profile.php?id=61570937553533" target="_blank">
+              <img src="./assets/image/infinity.png" alt="client logo">
+              </a>
+              <div class="client-content">
+                <h4 class="h4">Infinity Academy</h4>
+               
+            </div>
+             
+            
+            </div>
+          <p style="font-weight: bold; padding-bottom: 30px;">   Infinity Academy</p>
+        </section>
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">IOE Purwanchal Campus</h4>
+
+              <span>2021/22 — Current</span>
+
+              <p class="timeline-text">
+                Currently Pursuring Bachelor in Computer Engineering.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">National Infotech College</h4>
+
+              <span>2019-2021</span>
+
+              <p class="timeline-text">
+                Completed +2 level With 3.71 GPA in Computer Stream.
+              </p>
+
+            </li>
+
+           
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software-Hackathon Mentor (Delta 5.0)</h4>
+
+              <span>Jan 2025</span>
+
+              <p class="timeline-text">
+                Mentored and collaborated with teams to help them solve software development challenges.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Intern at Tuk-tuk tech</h4>
+
+              <span>Dec, 2023 - Jan, 2024</span>
+
+              <p class="timeline-text">
+                Learned how to collaborate effectively with others in a startup environment and gained some more insight in flutter.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/flutter.png" alt="Flutter" width="40">
+              </div>
+              <h5 class="h5">Flutter</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/dart.png" alt="Dart" width="40">
+              </div>
+              <h5 class="h5">Dart</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C/C++" width="40">
+              </div>
+              <h5 class="h5">C/C++</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" width="40">
+              </div>
+              <h5 class="h5">Python</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML" width="40">
+              </div>
+              <h5 class="h5">HTML</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS" width="40">
+              </div>
+              <h5 class="h5">CSS</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript" width="40">
+              </div>
+              <h5 class="h5">JavaScript</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/mysql-logo.png" alt="MySQL" width="40">
+              </div>
+              <h5 class="h5">MySQL</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/git.png" alt="Git/GitHub" width="40">
+              </div>
+              <h5 class="h5">Git/GitHub</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/firebase.png" alt="Firebase" width="40">
+              </div>
+              <h5 class="h5">Firebase</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+                <img src="https://www.deeplearningnerds.com/content/images/size/w300/2024/10/Tag---FastAPI-2.png" alt="FastApi" width="70">
+              </div>
+              <h5 class="h5">Fast-Api</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://download.logo.wine/logo/PostgreSQL/PostgreSQL-Logo.wine.png" alt="PostgreSQL" width="80">
+              </div>
+              <h5 class="h5">PostgreSQL</h5>
+            </li>
+
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://www.vhv.rs/dpng/d/208-2081341_scikit-learn-logo-png-transparent-png.png" alt="Scikit-learn" width="40">
+              </div>
+              <h5 class="h5">Scikit-learn</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://img.icons8.com/color/48/000000/tensorflow.png" alt="TensorFlow" width="40">
+              </div>
+              <h5 class="h5">TensorFlow</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://img.icons8.com/color/48/000000/numpy.png" alt="NumPy" width="40">
+              </div>
+              <h5 class="h5">NumPy</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="Pandas" width="40">
+              </div>
+              <h5 class="h5">Pandas</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://seeklogo.com/images/M/matplotlib-logo-7676870AC0-seeklogo.com.png" alt="Matplotlib" width="40">
+              </div>
+              <h5 class="h5">Matplotlib</h5>
+            </li>
+            <li class="skills-item">
+              <div class="skill-icon-box">
+              <img src="https://th.bing.com/th/id/OIP.H_SbstiCzFsEvVUppwRiWwHaHe?rs=1&pid=ImgDetMain" alt="PyTorch" width="40">
+              </div>
+              <h5 class="h5">PyTorch</h5>
+            </li>
+          </ul>
+        </section>
+
+
+        <!-- Achievement sections-->
+
+        <section class="achievements">
+          <h3 class="h3 achievements-title">Achievements</h3>
+          <ul class="achievements-list content-card">
+            <li class="achievements-item">
+              <div class="achievement-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/trophy.png" alt="Trophy" width="40">
+              </div>
+              <div class="achievement-content-box">
+                <h5 class="h5 achievement-title">Hack-a-Week (Pulchowk Campus)</h5>
+                <p class="achievement-text">Winner at IOE Pulchowk Campus in EDTECH and learning
+                  innovation category 2025</p>
+              </div>
+            </li>
+            <li class="achievements-item">
+              <div class="achievement-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/medal.png" alt="Medal" width="40">
+              </div>
+              <div class="achievement-content-box">
+                <h5 class="h5 achievement-title">Hult Prize (on Campus event)</h5>
+                <p class="achievement-text"> Winner in Hult prize on campus Event in Bussiness pitching (2025)</p>
+              </div>
+            </li>
+            <li class="achievements-item">
+              <div class="achievement-icon-box">
+                <img src="https://img.icons8.com/color/48/000000/trophy.png" alt="Certificate" width="40">
+              </div>
+              <div class="achievement-content-box">
+                <h5 class="h5 achievement-title">Birat - Expo (Startup Hackathon)</h5>
+                <p class="achievement-text"> 2nd runner-up in birat-expo startup hackathon 2025</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+      
+        <section class="projects">
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Apps</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>AI/ML Projects</button>
+            </li>
+          </ul>
+      
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>AI/ML projects</button>
+              </li>
+            </ul>
+          </div>
+      
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="apps">
+              <a href="https://play.google.com/store/apps/details?id=com.attendance.project">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/app1.jpg" alt="G Attandance" loading="lazy">
+                </figure>
+                <h3 class="project-title">G Attandance</h3>
+                <p class="project-category">Application</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="apps">
+              <a href="https://play.google.com/store/apps/details?id=com.amibeats">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/app2.jpg" alt="Ami Beats" loading="lazy">
+                </figure>
+                <h3 class="project-title">Ami Beats</h3>
+                <p class="project-category">Application</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="apps">
+              <a href="https://play.google.com/store/apps/details?id=com.secretpixel">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/app3.jpg" alt="secret pixel" loading="lazy">
+                </figure>
+                <h3 class="project-title">Secret pixel</h3>
+                <p class="project-category">Application</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://jeevankushwaha.com.np/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/web1.jpg" alt="portfolio website" loading="lazy">
+                </figure>
+                <h3 class="project-title">Portfolio</h3>
+                <p class="project-category">Web</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/web2.jpg" alt="Amazon-website clone" loading="lazy">
+                </figure>
+                <h3 class="project-title">Amazon Website clone</h3>
+                <p class="project-category">Web</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/web4.jpg" alt="weather website" loading="lazy">
+                </figure>
+                <h3 class="project-title">Weather</h3>
+                <p class="project-category">Web</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/web5.jpg" alt="To Do" loading="lazy">
+                </figure>
+                <h3 class="project-title">To-Do</h3>
+                <p class="project-category">Web</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://secretpixel.tech/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/web6.jpg" alt="Secret pixel" loading="lazy">
+                </figure>
+                <h3 class="project-title">Secret Pixel (As contributor)</h3>
+                <p class="project-category">Web</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="ai/ml projects">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ml1.jpg" alt="Brain Tumor detection" loading="lazy">
+                </figure>
+                <h3 class="project-title">Brain Tumor Detection</h3>
+                <p class="project-category">AI/ML</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="ai/ml projects">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ml2.jpg" alt="NLP" loading="lazy">
+                </figure>
+                <h3 class="project-title">NLP project</h3>
+                <p class="project-category">AI/ML</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="ai/ml projects">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ml3.jpg" alt="Heart diseases prediction" loading="lazy">
+                </figure>
+                <h3 class="project-title">Heart diseases Prediction</h3>
+                <p class="project-category">AI/ML</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="ai/ml projects">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/ml4.jpg" alt="Bulldozers" loading="lazy">
+                </figure>
+                <h3 class="project-title">sell price of Bulldozers Prediction</h3>
+                <p class="project-category">AI/ML</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+
+    <!--
+  - #BLOG
+-->
+
+<article class="blog" data-page="blog">
+  <header>
+    <h2 class="h2 article-title">Blog</h2>
+  </header>
+
+  <section class="blog-posts">
+    <ul class="blog-posts-list">
+      <!-- 1st blog-->
+      <li class="blog-post-item">
+        <a href="./blog.html">
+          <figure class="blog-banner-box">
+            <img src="https://miro.medium.com/v2/resize:fit:1358/1*KcxCTzISut_FEkKduDE4hw.gif" alt="Flutter Animation" loading="lazy">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">Flutter</p>
+              <span class="dot"></span>
+              <time datetime="2025-03-07">Mar 7, 2025</time>
+            </div>
+            <h3 class="h3 blog-item-title">Light/Dark Mode </h3>
+            <p class="blog-text">
+                 Explore how to implement light and dark mode as well as Animation while the mode change in your Flutter applications to enhance user experience.
+            </p>
+          </div>
+        </a>
+      </li>
+    
+    </ul>
+  </section>
+</article>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44805.42085111757!2d84.84408095752684!3d27.032225845669583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39935440af3b59e3%3A0x5aa0411733213e6a!2sBirgunj%20GhantaGhar!5e0!3m2!1shi!2snp!4v1741080753621!5m2!1shi!2snp"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <!-- contact form -->
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" method="post" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="entry.YOUR_NAME_ENTRY_ID" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="entry.YOUR_EMAIL_ENTRY_ID" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="entry.YOUR_MESSAGE_ENTRY_ID" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+
+       
+      
+      </article>
+
+    </div>
+
+   
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

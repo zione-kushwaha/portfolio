@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flutter Light and Dark Mode Tutorial</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #007BFF, #00BFFF);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-top: 40px;
+      font-size: 2rem;
+      font-weight: 600;
+      border-bottom: 2px solid #007BFF;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .blog-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    pre {
+      background: #2d2d2d;
+      padding: 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      position: relative;
+      color: #f8f8f2;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* Animations and Hover Effects */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flutter Light and Dark Mode: A Complete Guide</h1>
+    <p>Learn how to implement light and dark mode in your Flutter app with detailed explanations and code examples.</p>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>Light and dark mode are essential features in modern applications. They improve user experience by allowing users to choose a theme that suits their preferences. In this tutorial, we'll explore how to implement light and dark mode in a Flutter application.</p>
+      <img src="https://miro.medium.com/v2/resize:fit:1358/1*KcxCTzISut_FEkKduDE4hw.gif" alt="Flutter Light and Dark Mode Example" class="blog-image">
+    </section>
+
+    <section id="implementation">
+      <h2>Implementation</h2>
+      <p>To implement light and dark mode in Flutter, follow these steps:</p>
+      <ol>
+        <li>
+          <strong>Set up your Flutter project:</strong> Create a new Flutter project or use an existing one.
+          <p>To create a new Flutter project, use the following command:</p>
+          <pre style="display: flex; align-items: center; justify-content: space-between;"><code id="createProjectCommand">flutter create my_flutter_app</code>
+            <button onclick="copyCommandToClipboard()" style="margin-left: 10px;">Copy Code</button>
+            <script>
+            function copyCommandToClipboard() {
+            const commandSnippet = document.getElementById('createProjectCommand').innerText;
+            navigator.clipboard.writeText(commandSnippet).then(() => {
+            alert('Command copied to clipboard!');
+            }).catch(err => {
+            console.error('Failed to copy: ', err);
+            });
+            }
+            </script>
+          </pre>
+        </li>
+        <li>
+          <strong>Add theme data:</strong> Define light and dark themes in your app's <code>MaterialApp</code> widget.
+          <p>In Flutter, themes are defined using the <code>ThemeData</code> class. You can create a light theme using <code>ThemeData.light()</code> and a dark theme using <code>ThemeData.dark()</code>.</p>
+          
+        </li>
+        <li>
+          <strong>Toggle between themes:</strong> Use a <code>Switch</code> or <code>Dropdown</code> to allow users to switch between light and dark modes.
+          <p>You can use a <code>Switch</code> widget to toggle between themes. When the user changes the switch state, update the app's theme dynamically using <code>setState</code>.</p>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMHBhASBxMRFhUWGBUYFRIWEhgVFRgVGRkXFxkVExcYICkgGBsmGxUVITchJSkuMDA6GCAzODM4Nyg5Oi4BCgoKDg0OGhAQFy0fHyYtLSstKy0rLS0rLTctLSsvLS0tLS0tLS0rLS0rNCsrLS0tKys3LS4rKysrLTcrKysrK//AABEIAKgBKwMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABAUDBgIHCAH/xAA0EAACAQMDAgMGBAYDAAAAAAAAAQIDBBEFEiEGMRNBUQciUmGBkRQVIzIzcZKhscFC0fD/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EAB0RAQEBAAMAAwEAAAAAAAAAAAABEQISEyExYVH/2gAMAwEAAhEDEQA/AOtgAexxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADFXuI0F+o/p5jVZQVs9U59yP3Zw/NJfCvuY9OK9atQVX5pL4V9x+aS+FfcenE61agqvzSXwr7nJao/OK+49OJ1qzBGt72NZ4XD9H/okmpZUAAVAAAAAAAAAAAAAAAAAAAAAABkt1mvHJ9uliu8fL/CCseOD4SIxf4R88Z7Y/wBnyNt7ic2lntkDAGsdzNVoeFFNvuSbmj4tRZaQEAGf8PsrpSaOV1RUXmOF248wIwACMdxV8Knld/Iqpxc5Zl3Jl491XHoYMHPl81uJlh03c6jp9avZUak6dFRc5peUnhbV3n2educFZ4Xqdq9Fe1SPTvS8LW6p16ko+IoVIumlTi1+nGKf7sPOc/37HXNvSnqeowi5J1K1RJylLbF1KkuZSl5LdLJzkVB8LPbJI1DS6umXbpajTnTqLDcJLEkmsp/VGfU7CWmajVo3Dg5U5OMnCW6La84y80Y7q5neV3O8nOpN4zOcnOTwsLMpc9kXDXPQaNvPWKK151I27l+rKn+9LDw1w+N23PGcZxydy3/sPtL2yVTp+6rRckpQc3GrSkmk01tSeGvPL7nSWD0R7Cb6d10RsrNtUas4Qb+BqM0l8k5tfYzymLK6F6j6auOmtSdDV4bZd4yTzCce26nLzX915ox2VZyW2p38n8j0f7W+nY690fWltzVoKVWlLzzFZlFfKUU1j1w/I8z03tkmjXCpVmADu5gOzrvpzR9F0Kxra6rvdcUoz/Tm2t22Dlx5L30VurdG2t/0/Uvei69SpClnxqFRfqRSWXt4Tylzh5yuU/XPeNY0MFxpPSt7rNHfpdtVnD4/djH6ObSl9Mka70W4stSjb3dGcK0nFRpywnJyeI7XnDTfGc4LsRABbX/TF7YW1ed1b1IRopeJJ7dscpNcptSfMeFnvybH7TNApabrdnR0OjtdWlF7IbpOVRya4TbeRsMaMCbq2k1tGuvD1Sm6c8J7HKEnh9m9jePqQioAAAAAAAAAADLbfx4mevbOpVbjghn3IVKSxZSXzf8Ak+1Iq4pxcWljumRMmaFWO1Kce3mBlulijDHPz+hx1D+Iv5GKvW8VryS7IxZz3AmXTxOm3/7sfL2m3LcsY4ImRkAAAiDcr9Z/QlaPZUr64nG/uI28Y05zjOUHNSnHG2kkmnmWXz8uzMV7D3dy8u5B8Q5cvtuMi5XIa45MXiGewvPwd9SqRSeycZYaUk9rTw1Lh9vMmmE6Toy21IuLwnhpxe2SzF4fk000/M4OST5aNs9ovW0OsLmhK1oeDGmppp7G5Zfuvcknjal7vZPt6lj7KerrXSKlW16lp0pUK0lJVZ01NQnhLFTKfuNJc+WH5Pib8LjTtI0yrrV9GjpVOVSpJ8Rjzj5yfaMfmz1F0J02ulemqVtlSksyqTXZ1Jcyx8lwl8kiz0q3t6NqnpMaMacuU6UYqLXqtvDJVWqqNNyqtJLltvCS9W32MXlqyKvq67jY9LXlSu8RjRqt/wBDSX3aPJEI4gl8kdpe2H2jU9bh+C0Ge6imnWrL9tRrmMIesE+W/NpY479Y2cfEqfJGuESrBB9gD0Obsr2kW86/Smh/h4VJ4oPOyEp49yj32p4M/s4sanTnTup3mtxlSpTpKEIVE4ym1v5UZc8ucYrjnk1uy9pGo2NnTpW1aChCMYxXgweIxWEstc8Iqde6mu+oZL83rSmovMYYUYRfbKjFJZw3z35Zz63Ma2NwtrCnoHSFhLXL3VMVoudKjaPZCGcSalJd5Peny/N4XBd9frfq/T02qmXOCzVSVXG+i/1Mf8vX55NB0fru/wBG05ULGslTj+xSpxm4L0g5LhfLyI+pdW3eqVrad/VU5W7UqUnCOVJOLzLC97mK7jrd1djZvbLr9xPqGvaxqSjQjCGaUXiMm47nKfxctd/RHZt1VtKPUNqq84xvatu4W8pR3KCSbbjnhNtv+e1r1PPut6rV13UJ1tSkpTmkpNRUVhLauFx2RJ1fqS51i+o1r6pmpSUVTlGKg47Xui/d80+cjp8RNYeoLWvZ63cQ1hylWU34k3y5Pupp+jTTXyaK8s9f16t1DeRq6o4Smo7d0acYNxTbSltSzjL7+pWG59IAAqAAAAAAAAAAAAAAAAAAAAAA+VyVt1YtPNvyvh/6LIEvGVZca/NuD99Nfz4OPiGxDBz8/wBa7Nd8QeIbFgYHnf6dlXp2vXOlRxpdzcUl6U604L7ReDlqHUF1qsNuo3NzWXw1K05x/pbwWWBgnl+nZUW9nOq/eW1er7/RFrSpqlDEDkDpx4yM26AA0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//Z" alt="Toggle Between Themes" class="blog-image">
+        </li>
+      </ol>
+    </section>
+
+    <section id="code-example">
+      <h2>Code Example</h2>
+      <p>Here's a detailed code snippet to implement light and dark mode in Flutter:</p>
+      <pre><code id="codeSnippet">
+        <button onclick="copyToClipboard()" style="float: right;">Copy Code</button>
+        <script>
+            function copyToClipboard() {
+            const codeSnippet = document.getElementById('codeSnippet').innerText;
+            navigator.clipboard.writeText(codeSnippet).then(() => {
+                alert('Code copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+            }
+        </script>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State&lt;MyApp&gt; {
+  bool _isDarkMode = false;
+
+  void _toggleTheme(bool value) {
+    setState(() {
+      _isDarkMode = value;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: _isDarkMode ? ThemeData.dark() : ThemeData.light(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Flutter Light and Dark Mode'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                _isDarkMode ? 'Dark Mode' : 'Light Mode',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20),
+              Switch(
+                value: _isDarkMode,
+                onChanged: _toggleTheme,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+      </code></pre>
+      <p>This code creates a simple Flutter app with a switch to toggle between light and dark modes. The app's theme changes dynamically based on the switch state.</p>
+     
+    </section>
+
+
+
+    <section id="recommendation">
+        <h2>Recommendation</h2>
+        <p>If you want to add animations while toggling between light and dark modes, consider using the <a href="https://pub.dev/packages/animated_theme_switcher" target="_blank">animated_theme_switcher</a> package. This package provides smooth and customizable theme transitions, enhancing the user experience.</p>
+        <p>To use the <code>animated_theme_switcher</code> package, follow these steps:</p>
+        <ol>
+            <li>Add the package to your <code>pubspec.yaml</code> file:</li>
+            <pre><code id="dependenciesSnippet">dependencies:
+                animated_theme_switcher: "^2.0.8"</code>
+                <button onclick="copyDependenciesToClipboard()" style="float: right;">Copy Dependency</button>
+                <script>
+                function copyDependenciesToClipboard() {
+                    const dependenciesSnippet = document.getElementById('dependenciesSnippet').innerText;
+                    navigator.clipboard.writeText(dependenciesSnippet).then(() => {
+                        alert('Dependencies copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </pre>
+            <li>Import the package in your Dart file:</li>
+
+
+            <pre><code>import 'package:animated_theme_switcher/animated_theme_switcher.dart';</code>
+                <button onclick="copyImportToClipboard()" style="float: right; max-height: 20px;">Copy Import</button>
+                <script>
+                function copyImportToClipboard() {
+                    const importSnippet = 'import \'package:animated_theme_switcher/animated_theme_switcher.dart\';';
+                    navigator.clipboard.writeText(importSnippet).then(() => {
+                        alert('Import statement copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+                </script>
+            </pre>
+            
+            <li>Wrap your <code>MaterialApp</code> with <code>ThemeProvider</code> and use <code>ThemeSwitcher</code> to toggle themes:</li>
+            <pre><code id="codeSnippet"></code>
+            <button onclick="copyToClipboard()" style="float: right;">Copy Code</button>
+            <script>
+                function copyToClipboard() {
+                    const codeSnippet = document.getElementById('codeSnippet').innerText;
+                    navigator.clipboard.writeText(codeSnippet).then(() => {
+                        alert('Code copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                    });
+                }
+            </script>
+
+            <code>
+            import 'package:flutter/material.dart';
+            import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+
+            void main() {
+                runApp(MyApp());
+            }
+
+            class MyApp extends StatelessWidget {
+                @override
+                Widget build(BuildContext context) {
+                    return ThemeProvider(
+                        initTheme: ThemeData.light(),
+                        builder: (context, myTheme) {
+                            return MaterialApp(
+                                theme: myTheme,
+                                home: HomeScreen(),
+                            );
+                        },
+                    );
+                }
+            }
+
+            class HomeScreen extends StatelessWidget {
+                @override
+                Widget build(BuildContext context) {
+                    return Scaffold(
+                        appBar: AppBar(
+                            title: Text('Flutter Light and Dark Mode'),
+                        ),
+                        body: Center(
+                            child: ThemeSwitcher(
+                                builder: (context) {
+                                    return Switch(
+                                        value: ThemeProvider.of(context)!.brightness == Brightness.dark,
+                                        onChanged: (value) {
+                                            ThemeSwitcher.of(context).changeTheme(
+                                                theme: value ? ThemeData.dark() : ThemeData.light(),
+                                            );
+                                        },
+                                    );
+                                },
+                            ),
+                        ),
+                    );
+                }
+            }
+            </code></pre>
+
+    <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Implementing light and dark mode in Flutter is straightforward and enhances the user experience. By following the steps and code examples provided in this tutorial, you can easily add this feature to your Flutter app.</p>
+       
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Flutter Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: inherit;
+    color: inherit;
+  }
+  
+  button#theme-toggle {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: #6200ea;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  button#theme-toggle:hover {
+    background-color: #3700b3;
+  }
